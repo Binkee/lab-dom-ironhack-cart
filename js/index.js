@@ -14,14 +14,15 @@ function updateSubtotal(product) {
 function calculateAll() {
   
   const totalProducts = document.querySelectorAll('.product');
-  
+  let sum = 0
   console.log(totalProducts)
   totalProducts.forEach(function(product){
-    updateSubtotal(product)
-
-  })
+    let total = updateSubtotal(product)
+    sum = sum + total
+ })
  
-  let newTotal = 
+  let totalDom = document.querySelector('#total-value')
+  totalDom.innerHTML = sum
 }
 
 // ITERATION 4
